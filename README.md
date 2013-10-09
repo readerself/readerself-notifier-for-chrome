@@ -1,5 +1,4 @@
-* [http://readerself.com/readerself-notifier-for-chrome.crx](http://readerself.com/readerself-notifier-for-chrome.crx)
-* Save crx file, drag&drop in Google Chrome (chrome://extensions/) and set options with your URL installation
+[Chrome Web Store - Reader Self Notifier](https://chrome.google.com/webstore/detail/reader-self-notifier/ekiehkdmjondgblicoaolfialehhdkoc)
 
 ![Screenshot](medias/screenshot.png)
 
