@@ -1,6 +1,6 @@
 {
   "name": "Reader Self Notifier",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Displays the number of unread items in Reader Self",
   "manifest_version": 2,
   "icons": { "16": "/medias/readerself_16x16.png", "48": "/medias/readerself_48x48.png", "128": "/medias/readerself_128x128.png" },

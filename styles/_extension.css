@@ -97,3 +97,10 @@ main > section article[dir=rtl] .item-details li{margin-left:5px;margin-right:0p
 main section article[dir=rtl] .item-footer .actions{float:right;}
 main section article[dir=rtl] .item-footer .actions li{margin:5px 0px 0px 4px;}
 main section article[dir=rtl] .item-footer .actions li:last-child{margin-left:0px;}
+
+span.color{display:block;float:left;height:5px;padding:4px;margin-right:2px;white-space:nowrap;}
+.color_red{background-color:#FF3366!important;}
+.color_orange{background-color:#FF9900!important;}
+.color_yellow{background-color:#FFDE00!important;}
+.color_gray{background-color:#CCCCCC!important;}
+.color_green{background-color:#66CC00!important;}

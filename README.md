@@ -2,7 +2,6 @@
 * Save crx file, drag&drop in Google Chrome (chrome://extensions/) and set options with your URL installation
 
 ![Screenshot](medias/screenshot.png)
-![Options](medias/options.png)
 
 ### Third party
 
