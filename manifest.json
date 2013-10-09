@@ -5,7 +5,7 @@
   "manifest_version": 2,
   "icons": { "16": "/medias/readerself_16x16.png", "48": "/medias/readerself_48x48.png", "128": "/medias/readerself_128x128.png" },
   "homepage_url": "http://readerself.com",
-
+  "update_url": "http://readerself.com/readerself-notifier-for-chrome.xml",
   "options_page": "/application/views/options.html",
   "background": { "page": "/application/views/background.html" },
 
