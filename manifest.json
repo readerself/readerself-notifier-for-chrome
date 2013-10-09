@@ -3,14 +3,14 @@
   "version": "1.0",
   "description": "Displays the number of unread items in Reader Self",
   "manifest_version": 2,
-  "icons": { "48": "/medias/icon.png", "128": "/medias/icon.png" },
+  "icons": { "16": "/medias/readerself_16x16.png", "48": "/medias/readerself_48x48.png", "128": "/medias/readerself_128x128.png" },
   "homepage_url": "http://readerself.com",
 
   "options_page": "/application/views/options.html",
   "background": { "page": "/application/views/background.html" },
 
   "browser_action": {
-    "default_icon": "/medias/favicon.png",
+    "default_icon": "/medias/readerself_16x16.png",
     "default_title": "Reader Self Notifier"
   },
   "permissions": [
