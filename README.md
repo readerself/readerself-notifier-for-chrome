@@ -1,6 +1,7 @@
-[Chrome Web Store - Reader Self Notifier](https://chrome.google.com/webstore/detail/reader-self-notifier/ekiehkdmjondgblicoaolfialehhdkoc)
-
 ![Screenshot](medias/screenshot.png)
+
+### Install
+From [Chrome Web Store](https://chrome.google.com/webstore/detail/reader-self-notifier/ekiehkdmjondgblicoaolfialehhdkoc)
 
 ### Third party
 
