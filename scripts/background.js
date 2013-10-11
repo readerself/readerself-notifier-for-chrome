@@ -23,8 +23,8 @@ function _update() {
 					title = 'You have no unread items';
 					colorCode = 'gray'
 				}
-				if(data.unread > 99) {
-					badgeText = '99+';
+				if(data.unread > 999) {
+					badgeText = '999+';
 				} else {
 					badgeText = data.unread;
 				}
@@ -39,38 +39,34 @@ function _update() {
 		url: options.url + '/extension/background'
 	});
 }
-$(document).ready(function() {
-	chrome.storage.local.get(null, function(cfg) {
-		if(cfg) {
-			options = cfg;
+chrome.storage.local.get(null, function(cfg) {
+	if(cfg) {
+		options = cfg;
 
-			chrome.alarms.create({periodInMinutes: 10});
-			chrome.alarms.onAlarm.addListener(_update);
+		chrome.alarms.create({periodInMinutes: 10});
+		chrome.alarms.onAlarm.addListener(_update);
 
-			if(options.url) {
-				chrome.runtime.onConnectExternal.addListener(function(port) {
-					port.onMessage.addListener(function(url) {
-						if(url.indexOf(options.url) != -1) {
-							_update();
-						}
-					});
-				});
-				_update();
-			} else {
-				title = 'Set your URL';
-				badgeText = '!';
-				colorCode = 'red'
-				setBrowserAction(title, badgeText, colorCode);
-			}
-
-			chrome.browserAction.onClicked.addListener(function() {
-				if(options.url) {
+		if(options.url) {
+			chrome.extension.onRequest.addListener(function(request, sender) {
+				if(request.msg == 'refresh_from_content') {
 					_update();
-					chrome.tabs.create({ url: options.url });
-				} else {
-					chrome.tabs.create({ url: '/application/views/options.html' });
 				}
 			});
+			_update();
+		} else {
+			title = 'Set your URL';
+			badgeText = '!';
+			colorCode = 'red'
+			setBrowserAction(title, badgeText, colorCode);
 		}
-	});
+
+		chrome.browserAction.onClicked.addListener(function() {
+			if(options.url) {
+				_update();
+				chrome.tabs.create({ url: options.url });
+			} else {
+				chrome.tabs.create({ url: '/application/views/options.html' });
+			}
+		});
+	}
 });
