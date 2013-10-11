@@ -44,10 +44,17 @@ $(document).ready(function() {
 		if(cfg) {
 			options = cfg;
 
-			chrome.alarms.create({periodInMinutes: 1});
+			chrome.alarms.create({periodInMinutes: 10});
 			chrome.alarms.onAlarm.addListener(_update);
 
 			if(options.url) {
+				chrome.runtime.onConnectExternal.addListener(function(port) {
+					port.onMessage.addListener(function(url) {
+						if(url.indexOf(options.url) != -1) {
+							_update();
+						}
+					});
+				});
 				_update();
 			} else {
 				title = 'Set your URL';
