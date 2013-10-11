@@ -1,6 +1,6 @@
 {
 	"name": "Reader Self Notifier",
-	"short_name": "Reader Self",
+	"short_name": "Notifier",
 	"version": "1.3",
 	"description": "Extension related to Reader Self, self-hosted feeds aggregator and Google Reader alternative",
 	"manifest_version": 2,
