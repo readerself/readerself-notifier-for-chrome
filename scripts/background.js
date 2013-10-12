@@ -59,7 +59,7 @@ chrome.storage.local.get(null, function(cfg) {
 		if(saved_version_compare != current_version) {
 			var options_notification = {
 				'type': 'basic',
-				'title': 'Reader Self',
+				'title': 'Reader Self Notifier',
 				'message': 'Updated to version ' + current_version,
 				'iconUrl': '/medias/readerself_48x48.png'
 			};
