@@ -1,5 +1,16 @@
 {
 	"description": {
 		"message": "Get unread items count from your Reader Self installation"
+	},
+	"note_installation": {
+		"message": "Set your URL in options"
+	},
+	"note_updated": {
+		"message": "Updated to version $current_version$",
+		"placeholders": {
+			"current_version": {
+				"content": "$1"
+			}
+		}
 	}
 }

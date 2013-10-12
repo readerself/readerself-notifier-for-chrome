@@ -63,7 +63,7 @@ chrome.storage.local.get(null, function(cfg) {
 				'message': 'Updated to version ' + current_version,
 				'iconUrl': '/medias/readerself_48x48.png'
 			};
-			chrome.notifications.create(current_version, options_notification, function() {
+			chrome.notifications.create('note_updated', options_notification, function() {
 			});
 		}
 
@@ -75,6 +75,19 @@ chrome.storage.local.get(null, function(cfg) {
 			});
 			_update();
 		} else {
+			if(!options.note_installation) {
+				chrome.storage.local.set( {'note_installation': true} );
+
+				var options_notification = {
+					'type': 'basic',
+					'title': 'Reader Self Notifier',
+					'message': 'Set your URL in options',
+					'iconUrl': '/medias/readerself_48x48.png'
+				};
+				chrome.notifications.create('note_installation', options_notification, function() {
+				});
+			}
+
 			title = 'Set your URL';
 			badgeText = '!';
 			colorCode = 'red'
