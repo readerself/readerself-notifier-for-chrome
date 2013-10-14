@@ -1,15 +1,12 @@
 var options;
 
 function _update() {
-	if(options.url.slice(-1) === '/') {
-		options.url = options.url.slice(0, -1);
-	}
 	$.ajax({
 		async: true,
 		cache: false,
 		dataType: 'json',
 		error: function(jqXHR, textStatus, errorThrown) {
-			title = 'URL error';
+			title = chrome.i18n.getMessage('url_error');
 			badgeText = '!';
 			colorCode = 'orange'
 			setBrowserAction(title, badgeText, colorCode);
@@ -17,10 +14,10 @@ function _update() {
 		success: function(data, textStatus, jqXHR) {
 			if(data.logged) {
 				if(data.unread > 0) {
-					title = 'You have ' + data.unread + ' unread items';
+					title = chrome.i18n.getMessage('unread_items', data.unread);
 					colorCode = 'green'
 				} else {
-					title = 'You have no unread items';
+					title = chrome.i18n.getMessage('no_unread_items');
 					colorCode = 'gray'
 				}
 				if(data.unread > 999) {
@@ -29,7 +26,7 @@ function _update() {
 					badgeText = data.unread;
 				}
 			} else {
-				title = 'You are not connected';
+				title = chrome.i18n.getMessage('not_connected');
 				badgeText = '!';
 				colorCode = 'yellow'
 			}
@@ -88,7 +85,7 @@ chrome.storage.local.get(null, function(cfg) {
 				});
 			}
 
-			title = 'Set your URL';
+			title = chrome.i18n.getMessage('set_url');
 			badgeText = '!';
 			colorCode = 'red'
 			setBrowserAction(title, badgeText, colorCode);

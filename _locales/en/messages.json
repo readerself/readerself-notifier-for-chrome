@@ -12,5 +12,37 @@
 				"content": "$1"
 			}
 		}
+	},
+	"options": {
+		"message": "Options"
+	},
+	"send": {
+		"message": "Send"
+	},
+	"url_blank": {
+		"message": "URL cannot be blank!"
+	},
+	"options_saved": {
+		"message": "Options saved successfully."
+	},
+	"set_url": {
+		"message": "Set your URL"
+	},
+	"url_error": {
+		"message": "URL error"
+	},
+	"not_connected": {
+		"message": "You are not connected"
+	},
+	"no_unread_items": {
+		"message": "You have no unread items"
+	},
+	"unread_items": {
+		"message": "You have $unread$ unread items",
+		"placeholders": {
+			"unread": {
+				"content": "$1"
+			}
+		}
 	}
 }

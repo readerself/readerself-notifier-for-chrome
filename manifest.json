@@ -1,7 +1,7 @@
 {
 	"name": "Reader Self Notifier",
 	"short_name": "Notifier",
-	"version": "1.5.2",
+	"version": "1.5.3",
 	"default_locale": "en",
 	"description": "__MSG_description__",
 	"manifest_version": 2,

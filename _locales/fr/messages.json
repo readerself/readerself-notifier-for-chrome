@@ -3,12 +3,44 @@
 		"message": "Obtenir le compte des éléments non lus de votre installation Reader Self"
 	},
 	"note_installation": {
-		"message": "Définir votre URL dans les options"
+		"message": "Définissez votre URL dans les options"
 	},
 	"note_updated": {
 		"message": "Mise à jour à la version $current_version$",
 		"placeholders": {
 			"current_version": {
+				"content": "$1"
+			}
+		}
+	},
+	"options": {
+		"message": "Options"
+	},
+	"send": {
+		"message": "Envoyer"
+	},
+	"url_blank": {
+		"message": "L'URL ne peut être vide"
+	},
+	"options_saved": {
+		"message": "Options sauvegardées."
+	},
+	"set_url": {
+		"message": "Définissez votre URL"
+	},
+	"url_error": {
+		"message": "Erreur URL"
+	},
+	"not_connected": {
+		"message": "Vous n'êtes pas connecté"
+	},
+	"no_unread_items": {
+		"message": "Aucun élément non lu"
+	},
+	"unread_items": {
+		"message": "Vous avez $unread$ éléments non lus",
+		"placeholders": {
+			"unread": {
 				"content": "$1"
 			}
 		}
