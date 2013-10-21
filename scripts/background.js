@@ -14,7 +14,7 @@ function _update() {
 		success: function(data, textStatus, jqXHR) {
 			if(data.logged) {
 				if(data.unread > 0) {
-					title = chrome.i18n.getMessage('unread_items', data.unread);
+					title = chrome.i18n.getMessage('unread_items', String(data.unread));
 					colorCode = 'green'
 				} else {
 					title = chrome.i18n.getMessage('no_unread_items');
