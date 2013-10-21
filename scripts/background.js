@@ -23,7 +23,7 @@ function _update() {
 				if(data.unread > 999) {
 					badgeText = '999+';
 				} else {
-					badgeText = data.unread;
+					badgeText = String(data.unread);
 				}
 			} else {
 				title = chrome.i18n.getMessage('not_connected');
